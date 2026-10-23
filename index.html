@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Research focused on trust and safety in AI agents.">
+    <title>
+      Agent Trust &amp; Safety
+    </title>
+    <link rel="icon" type="image/svg+xml" href="static/images/logo.svg">
+    <script src="static/js/theme.js">
+    </script>
+    <link rel="stylesheet" href="static/css/style.css">
+  </head>
+  <body>
+    <!-- Fixed navigation -->
+    <div class="topbar">
+      <nav class="topbar-inner" aria-label="Main navigation">
+        <a class="topbar-brand" href="./index.html">
+          <img class="topbar-logo" src="static/images/logo.svg" alt="" width="24" height="24">
+          <span class="topbar-title">
+            Agent Trust &amp; Safety
+          </span>
+        </a>
+        <div class="topbar-actions">
+          <a class="topbar-button" href="mailto:jiaconghu@zju.edu.cn" aria-label="Email Jiacong Hu" title="Email Jiacong Hu">
+            <svg class="icon-mail" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="14" rx="2"/>
+              <path d="m3 7 9 6 9-6"/>
+            </svg>
+          </a>
+          <button class="topbar-button" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode">
+            <svg class="theme-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"/>
+            </svg>
+            <svg class="theme-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2 M12 20v2 M2 12h2 M20 12h2 M4.93 4.93l1.42 1.42 M17.65 17.65l1.42 1.42 M4.93 19.07l1.42-1.42 M17.65 6.35l1.42-1.42"/>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+    <main class="page">
+      <header class="site-header">
+        <div class="header-intro">
+          <h1>
+            Agent Trust &amp; Safety
+          </h1>
+          <p class="subtitle">
+            Research focused on trust and safety in AI agents.
+          </p>
+        </div>
+        <div class="header-logos" role="group" aria-label="Research affiliations">
+          <a class="affiliation-link" href="https://www.zju.edu.cn/english/" target="_blank" rel="noopener noreferrer">
+            <img class="affiliation-logo" src="static/images/ZJU-logo.svg" alt="Zhejiang University" width="142" height="142">
+          </a>
+          <a class="affiliation-link" href="https://bcds.zju.edu.cn/" target="_blank" rel="noopener noreferrer">
+            <img class="affiliation-logo" src="static/images/ZJU-BCDS-logo.svg" alt="BCDS in Zhejiang University" width="100" height="142">
+          </a>
+          <a class="affiliation-link" href="https://vipazoo.cn/" target="_blank" rel="noopener noreferrer">
+            <img class="affiliation-logo" src="static/images/VIPA-logo.svg" alt="VIPA Research Group" width="181" height="84">
+          </a>
+        </div>
+        <div class="nav-row">
+          <nav class="nav" aria-label="Section navigation">
+            <a href="#concept">
+              Introduction
+            </a>
+            <a href="#publications">
+              Publications
+            </a>
+          </nav>
+          <nav class="social-links" aria-label="Research profiles">
+            <a href="https://github.com/trust-safety" target="_blank" rel="noopener noreferrer" aria-label="GitHub: Trust &amp; Safety" title="GitHub">
+              <img class="profile-icon github-icon" src="static/images/github.svg" alt="" width="16" height="16" aria-hidden="true">
+              <span>
+                GitHub
+              </span>
+            </a>
+            <a href="https://huggingface.co/trust-safety" target="_blank" rel="noopener noreferrer" aria-label="Hugging Face: Trust &amp; Safety" title="Hugging Face">
+              <img class="profile-icon" src="static/images/hugging-face.svg" alt="" width="16" height="16" aria-hidden="true">
+              <span>
+                Hugging Face
+              </span>
+            </a>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Introduction: definitions and research framework -->
+      <section id="concept" aria-labelledby="concept-title">
+        <h2 id="concept-title">
+          Introduction
+        </h2>
+        <p class="lead">
+          Agent Trust refers here to the reliability, transparency, and verifiability of behavior and outcomes. Agent Safety focuses on preventing, detecting, and mitigating harmful behavior and risks. In our research, agent safety is one dimension of agent trust.
+        </p>
+        <figure class="figure concept-figure">
+          <svg viewBox="0 0 650 142" role="img" aria-labelledby="venn-title venn-desc">
+            <title id="venn-title">Agent trust and safety: conceptual relationship</title>
+            <desc id="venn-desc">
+              Agent safety is shown as a subset of agent trust, which also covers reliability, transparency, and verifiability.
+            </desc>
+            <ellipse cx="325" cy="61" rx="285" ry="54" fill="#f3f3f3" stroke="#888" stroke-width="1.5"/>
+            <text x="110" y="52" class="figure-label">
+              Agent Trust
+            </text>
+            <text x="110" y="75" class="figure-small">
+              Reliable · transparent · verifiable
+            </text>
+            <ellipse cx="450" cy="61" rx="116" ry="42" fill="#dedede" stroke="#666" stroke-width="1.5"/>
+            <text x="450" y="59" text-anchor="middle" class="figure-label">
+              Agent Safety
+            </text>
+            <text x="450" y="80" text-anchor="middle" class="figure-small">
+              Prevent · detect · mitigate
+            </text>
+            <text x="325" y="135" text-anchor="middle" class="figure-caption">
+              Agent Safety ⊂ Agent Trust
+            </text>
+          </svg>
+        </figure>
+
+        <!-- Single-agent process and multi-agent communication lifecycle -->
+        <p id="framework" class="section-intro">
+          Our research covers trust and safety across the full single-agent process and the complete multi-agent communication lifecycle.
+        </p>
+        <div class="framework-grid">
+          <div class="framework-card">
+            <figure class="figure">
+              <svg viewBox="0 0 320 137" role="img" aria-labelledby="single-title single-desc">
+                <title id="single-title">Single-agent process: planning, action, and feedback</title>
+                <desc id="single-desc">
+                  Planning leads to action, action produces feedback, and feedback informs the next plan.
+                </desc>
+                <defs>
+                  <marker id="single-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                    <path d="M1 1L9 5L1 9" fill="none" stroke="#666" stroke-width="1.5"/>
+                  </marker>
+                </defs>
+                <text x="160" y="17" text-anchor="middle" class="figure-heading">
+                  Single-agent
+                </text>
+                <path d="M95 56H119 M197 56H221" stroke="#777" stroke-width="1.5" marker-end="url(#single-arrow)"/>
+                <path d="M260 80V105H57V80" fill="none" stroke="#888" stroke-width="1.5" marker-end="url(#single-arrow)"/>
+                <g fill="#f1f1f1" stroke="#888">
+                  <rect x="18" y="33" width="77" height="47" rx="4"/>
+                  <rect x="120" y="33" width="77" height="47" rx="4"/>
+                  <rect x="222" y="33" width="77" height="47" rx="4"/>
+                </g>
+                <text x="56" y="53" text-anchor="middle" class="figure-label">
+                  Planning
+                </text>
+                <text x="56" y="69" text-anchor="middle" class="figure-small">
+                  Decide
+                </text>
+                <text x="158" y="53" text-anchor="middle" class="figure-label">
+                  Action
+                </text>
+                <text x="158" y="69" text-anchor="middle" class="figure-small">
+                  Execute
+                </text>
+                <text x="260" y="53" text-anchor="middle" class="figure-label">
+                  Feedback
+                </text>
+                <text x="260" y="69" text-anchor="middle" class="figure-small">
+                  Evaluate
+                </text>
+                <text x="158" y="124" text-anchor="middle" class="figure-small">
+                  Self-audit · evidence · defense
+                </text>
+              </svg>
+            </figure>
+          </div>
+          <div class="framework-card">
+            <figure class="figure">
+              <svg viewBox="0 0 320 137" role="img" aria-labelledby="multi-title multi-desc">
+                <title id="multi-title">Multi-agent communication: before, during, and after</title>
+                <desc id="multi-desc">
+                  Before communication, agents prepare and predict risks. During communication, agents exchange messages in both directions and monitor risks. After communication, agents review outcomes and attribute risks.
+                </desc>
+                <defs>
+                  <marker id="multi-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                    <path d="M1 1L9 5L1 9" fill="none" stroke="#666" stroke-width="1.5"/>
+                  </marker>
+                </defs>
+                <text x="160" y="17" text-anchor="middle" class="figure-heading">
+                  Multi-agent
+                </text>
+                <g transform="translate(0 10)">
+                  <path d="M88 57H101 M219 57H232" stroke="#777" stroke-width="1.5" marker-end="url(#multi-arrow)"/>
+                  <g stroke="#888" fill="#f1f1f1">
+                    <rect x="8" y="23" width="80" height="68" rx="4"/>
+                    <rect x="102" y="23" width="116" height="68" rx="4" fill="#e9e9e9"/>
+                    <rect x="232" y="23" width="80" height="68" rx="4"/>
+                  </g>
+                  <text x="48" y="45" text-anchor="middle" class="figure-label">
+                    Before
+                  </text>
+                  <text x="48" y="67" text-anchor="middle" class="figure-small">
+                    Prepare
+                  </text>
+                  <text x="160" y="40" text-anchor="middle" class="figure-label">
+                    During
+                  </text>
+                  <circle cx="128" cy="62" r="12" fill="#f8f8f8" stroke="#888"/>
+                  <circle cx="192" cy="62" r="12" fill="#f8f8f8" stroke="#888"/>
+                  <text x="128" y="66" text-anchor="middle" class="figure-small">
+                    A
+                  </text>
+                  <text x="192" y="66" text-anchor="middle" class="figure-small">
+                    B
+                  </text>
+                  <path d="M142 56H176 M178 68H144" stroke="#666" stroke-width="1.2" marker-end="url(#multi-arrow)"/>
+                  <text x="160" y="85" text-anchor="middle" class="figure-small">
+                    Messages
+                  </text>
+                  <text x="272" y="45" text-anchor="middle" class="figure-label">
+                    After
+                  </text>
+                  <text x="272" y="67" text-anchor="middle" class="figure-small">
+                    Review
+                  </text>
+                  <text x="48" y="116" text-anchor="middle" class="figure-small">
+                    Risk prediction
+                  </text>
+                  <text x="160" y="116" text-anchor="middle" class="figure-small">
+                    Risk monitoring
+                  </text>
+                  <text x="272" y="116" text-anchor="middle" class="figure-small">
+                    Risk attribution
+                  </text>
+                </g>
+              </svg>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Publications -->
+      <section id="publications" aria-labelledby="pub-title">
+        <h2 id="pub-title" class="pub-heading">
+          Publications
+        </h2>
+        <div class="pub-group">
+          <p class="pub-group-label">
+            Single-agent research
+          </p>
+          <!-- Paper Start -->
+          <article class="paper">
+            <!-- link of the paper -->
+            <a class="thumb-link" href="https://arxiv.org/search/?query=ai+agent+planning&amp;searchtype=all" target="_blank" rel="noopener">
+              <img class="thumb" src="static/images/frameworks/framework-template.png" alt="Paper figure" width="164" height="116">
+            </a>
+            <div>
+              <h3>
+                <!-- link of the paper -->
+                <a href="https://arxiv.org/search/?query=ai+agent+planning&amp;searchtype=all" target="_blank" rel="noopener">
+                  Example: GoalTrace: Auditing Plans in Autonomous Agents
+                </a>
+              </h3>
+              <p class="meta">
+                Example: Maya Lin, Daniel Ortiz, Priya Rao*
+              </p>
+              <p class="blurb">
+                Example: A framework for checking whether agent plans remain aligned with stated goals and operational constraints.
+              </p>
+              <div class="publication-actions">
+                <div class="links">
+                  <a href="Project-Page-Template/index.html" target="_blank" rel="noopener">
+                    Homepage
+                  </a>
+                  <a href="https://arxiv.org/search/?query=ai+agent+planning&amp;searchtype=all" target="_blank" rel="noopener">
+                    Paper
+                  </a>
+                  <a href="https://github.com/search?q=ai+agent+planning&amp;type=repositories" target="_blank" rel="noopener">
+                    Code
+                  </a>
+                </div>
+                <span class="pub-badge">NeurIPS 2026</span>
+              </div>
+            </div>
+          </article>
+          <!-- Paper End -->
+          <!-- Paper Start -->
+          <!-- <article class="paper">
+            <a class="thumb-link" href="https://arxiv.org/search/?query=ai+agent+feedback&amp;searchtype=all" target="_blank" rel="noopener">
+              <img class="thumb" src="static/images/frameworks/framework-template.png" alt="Paper figure" width="164" height="116">
+            </a>
+            <div>
+              <h3>
+                <a href="https://arxiv.org/search/?query=ai+agent+feedback&amp;searchtype=all" target="_blank" rel="noopener">
+                  ReflectGuard: Calibrating Agent Feedback Under Uncertainty
+                </a>
+              </h3>
+              <p class="meta">
+                Lena Park, Amir Haddad, Sofia Reed*
+              </p>
+              <p class="blurb">
+                An approach to making agent feedback more informative when observations are incomplete or uncertain.
+              </p>
+              <div class="publication-actions">
+                <div class="links">
+                  <a href="Project-Page-Template/index.html" target="_blank" rel="noopener">
+                    Homepage
+                  </a>
+                  <a href="https://arxiv.org/search/?query=ai+agent+feedback&amp;searchtype=all" target="_blank" rel="noopener">
+                    Paper
+                  </a>
+                  <a href="https://github.com/search?q=ai+agent+feedback&amp;type=repositories" target="_blank" rel="noopener">
+                    Code
+                  </a>
+                </div>
+                <span class="pub-badge">ICLR 2026</span>
+                <span class="pub-badge">Spotlight</span>
+              </div>
+            </div>
+          </article> -->
+          <!-- Paper End -->
+        </div>
+        <div class="pub-group">
+          <!-- <p class="pub-group-label">
+            Multi-agent research
+          </p> -->
+          <!-- Paper Start -->
+          <!-- <article class="paper">
+            <a class="thumb-link" href="https://arxiv.org/search/?query=multi-agent+communication+safety&amp;searchtype=all" target="_blank" rel="noopener">
+              <img class="thumb" src="static/images/frameworks/framework-template.png" alt="Paper figure" width="164" height="116">
+            </a>
+            <div>
+              <h3>
+                <a href="https://arxiv.org/search/?query=multi-agent+communication+safety&amp;searchtype=all" target="_blank" rel="noopener">
+                  CommScope: Tracing Risk Across Multi-Agent Dialogues
+                </a>
+              </h3>
+              <p class="meta">
+                Nora Chen, Elias Morgan, Anika Shah*
+              </p>
+              <p class="blurb">
+                A communication audit that traces how risky information propagates between cooperating agents.
+              </p>
+              <div class="publication-actions">
+                <div class="links">
+                  <a href="Project-Page-Template/index.html" target="_blank" rel="noopener">
+                    Homepage
+                  </a>
+                  <a href="https://arxiv.org/search/?query=multi-agent+communication+safety&amp;searchtype=all" target="_blank" rel="noopener">
+                    Paper
+                  </a>
+                  <a href="https://github.com/search?q=multi-agent+communication+safety&amp;type=repositories" target="_blank" rel="noopener">
+                    Code
+                  </a>
+                </div>
+                <span class="pub-badge">ICML 2026</span>
+                <span class="pub-badge">Poster</span>
+              </div>
+            </div>
+          </article> -->
+          <!-- Paper End -->
+        </div>
+      </section>
+      <!-- Footer -->
+      <footer class="foot">
+        <a href="https://vipazoo.cn/" target="_blank">
+          https://vipazoo.cn/
+        </a>
+        ·
+        <a href="https://trust-safety.github.io/" target="_blank">
+          https://trust-safety.github.io/
+        </a>
+        <!-- ·
+        <a href="https://jiaconghu.com/" target="_blank">
+          https://jiaconghu.com/
+        </a> -->
+      </footer>
+    </main>
+    <script src="static/js/main.js" defer>
+    </script>
+  </body>
+</html>

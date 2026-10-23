@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 976 1150" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="ts-logo-title">
+  <title id="ts-logo-title">蓝色盾牌勾号标志</title>
+  <defs>
+    <linearGradient id="ts-logo-blue" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="976" y2="0">
+      <stop offset="0" stop-color="#073E83"/>
+      <stop offset="0.5" stop-color="#0053C5"/>
+      <stop offset="0.5" stop-color="#3994FA"/>
+      <stop offset="1" stop-color="#328AF1"/>
+    </linearGradient>
+  </defs>
+  <g fill="url(#ts-logo-blue)">
+    <path fill-rule="evenodd" d="M488 0C343 84 179 143 0 170V574C0 840 172 1029 488 1150C804 1029 976 840 976 574V170C797 143 633 84 488 0ZM488 117C363 187 239 229 104 256V574C104 785 247 941 488 1034C729 941 872 785 872 574V256C737 229 613 187 488 117Z"/>
+    <path d="M201 578 261 518 411 667 717 357 777 417 410 788Z"/>
+  </g>
+</svg>
